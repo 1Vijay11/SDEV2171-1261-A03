@@ -24,12 +24,14 @@ export default function DetailsScreen() {
         <TextInput
           placeholder="Tell me what you had for breakfast"
           style={{ borderWidth: 1, padding: 12 }}
-          onChangeText={(text) => console.log('typed: ', text)}
+          onChangeText={(text) => { noteVar = text; }}
         />
 
         <Pressable onPress={() => console.log('pressed!')}>
           <Text>Preview Response</Text>
         </Pressable>
+
+        <Text>{noteVar}</Text>
         {/* <Text style={styles.eyebrow}>Interactive detail route</Text>
         <Text style={styles.title}>Input Handling Screen</Text>
         <Text style={styles.body}>
